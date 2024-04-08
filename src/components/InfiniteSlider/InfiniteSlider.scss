@@ -1,0 +1,20 @@
+.infinite-slider {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  .infinite-slider-item {
+    position: absolute;
+    right: -200px;
+    padding: 24px;
+    margin: auto;
+    height: 100px;
+    width: 200px;
+    &.slide {
+      transition: right 15s linear;
+      right: calc(100% + 200px);
+    }
+  }
+}

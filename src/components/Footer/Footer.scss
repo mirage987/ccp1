@@ -1,0 +1,64 @@
+.footer {
+  background: rgba(44, 103, 242, 0.24);
+  background: linear-gradient(
+    -15deg,
+    rgba(44, 103, 242, 1) 0%,
+    rgba(45, 253, 245, 1) 50%,
+    rgba(44, 103, 242, 1) 100%
+  );
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    a {
+      font-size: 14px;
+      &:any-link {
+        color: black;
+        &:hover {
+          color: #2c67f2;
+        }
+      }
+    }
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 24px 3%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .footer {
+    padding: 24px 5%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 24px 8%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .footer {
+    padding: 24px 10%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .footer {
+    .logo {
+      .text {
+        display: block;
+      }
+    }
+  }
+}

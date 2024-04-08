@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body,
+html {
+  height: 100dvh;
+  width: 100dvw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-weight: 600;
+}
+p,
+button {
+  font-size: 18px;
+}
