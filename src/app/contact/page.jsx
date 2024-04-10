@@ -1,7 +1,7 @@
 import "./page.scss";
 import Image from "next/image";
 import contactIllustration from "../../../public/messenger.svg";
-import Footer from "@/components/Footer/Footer";
+import Breadcrum from "@/components/Breadcrumb/Breadcrum";
 
 export default function PageContact() {
   return (

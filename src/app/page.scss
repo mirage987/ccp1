@@ -7,12 +7,12 @@
   position: relative;
   section {
     z-index: 1;
+    scroll-snap-align: start;
     position: relative;
     &.hero-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      scroll-snap-align: center;
       height: 100%;
       background-color: white;
 
@@ -78,6 +78,7 @@
       text-align: start;
       h2 {
         text-align: center;
+        font-weight: 500;
       }
       .wrapper {
         display: flex;
@@ -100,13 +101,21 @@
             border-radius: 12px;
             padding: 12px;
             height: 100%;
+            img {
+              margin: auto;
+            }
             h3 {
               color: #2c67f2;
+              font-weight: 400;
+            }
+            p {
+              font-weight: 300;
             }
             span {
               color: rgb(61, 61, 61);
             }
             button {
+              font-weight: 100;
               width: fit-content;
               height: 40px;
               padding: 0 24px;

@@ -18,9 +18,10 @@ import trainingIllustration4 from "/public/trainings-illustration/undraw_product
 import SearchBar from "@/components/SearchBar/SearchBar";
 import lottie from "lottie-web";
 import Slider from "@/components/Slider/Slider";
+import Breadcrum from "@/components/Breadcrumb/Breadcrum";
 
 export default function Home() {
-  const slideItems = [
+  const [slideItems, setSlideItems] = useState([
     {
       id: 1,
       path: "",
@@ -39,10 +40,10 @@ export default function Home() {
       content:
         "Engagement envers la qualité, l'innovation et la satisfaction client, pour des solutions web performantes et durables.",
     },
-  ];
-  const services = [
+  ]);
+  const [services, setServices] = useState([
     {
-      id: 1,
+      id: "service1",
       pah: designIllustration,
       name: "Conception et développement",
       alt: "",
@@ -50,7 +51,7 @@ export default function Home() {
         "Création de sites web sur mesure adaptés aux besoins du client, du design visuel aux fonctionnalités techniques.",
     },
     {
-      id: 2,
+      id: "service2",
       pah: responsiveIllustration,
       name: "Design graphique",
       alt: "",
@@ -58,7 +59,7 @@ export default function Home() {
         "Création d'éléments visuels tels que des logos, des icônes et des maquettes pour rendre le site web esthétique et intuitif.",
     },
     {
-      id: 3,
+      id: "service3",
       pah: pubIllustration,
       name: "Marketing numérique",
       alt: "",
@@ -67,17 +68,17 @@ export default function Home() {
     },
 
     {
-      id: 4,
+      id: "service4",
       pah: ecoIllustration,
       name: "Commerce électronique",
       alt: "",
       description:
         "Mise en place de boutiques en ligne fonctionnelles incluant la gestion des stocks, des paiements sécurisés et des commandes pour faciliter les ventes en ligne.",
     },
-  ];
-  const trainings = [
+  ]);
+  const [trainings, setTrainings] = useState([
     {
-      id: 1,
+      id: "training1",
       name: "Développement Web",
       description:
         "Cette formation couvre les compétences nécessaires pour créer des sites web dynamiques et interactifs. Elle peut inclure l'apprentissage des langages de programmation tels que HTML, CSS, JavaScript, ainsi que l'utilisation de frameworks populaires tels que React, Angular ou Vue.js.",
@@ -87,7 +88,7 @@ export default function Home() {
       alt: "",
     },
     {
-      id: 2,
+      id: "training2",
       name: "Conception Graphique et UX/UI Design",
       description:
         "Cette formation se concentre sur la création d'interfaces utilisateur attrayantes et fonctionnelles. Elle peut inclure l'apprentissage des principes de design, des outils de conception graphique comme Adobe Photoshop, Illustrator, et des concepts d'expérience utilisateur (UX) et d'interface utilisateur (UI).",
@@ -97,7 +98,7 @@ export default function Home() {
       alt: "",
     },
     {
-      id: 3,
+      id: "training3",
       name: "Marketing Digital et SEO",
       description:
         "Cette formation est axée sur les stratégies de marketing en ligne, y compris la publicité sur les réseaux sociaux, le référencement naturel (SEO), la création de contenu, l'email marketing, etc. Elle vise à aider les entreprises à accroître leur visibilité en ligne et à générer du trafic qualifié vers leur site web.",
@@ -107,7 +108,7 @@ export default function Home() {
       alt: "",
     },
     {
-      id: 4,
+      id: "training4",
       name: "Gestion de Projet Web",
       description:
         "Cette formation est destinée à enseigner les compétences de gestion de projet spécifiques au domaine du développement web. Cela peut inclure la planification de projet, la gestion des ressources, la communication avec les clients, la budgétisation et la livraison de projets dans les délais et les budgets impartis.",
@@ -116,7 +117,7 @@ export default function Home() {
       path: trainingIllustration4,
       alt: "",
     },
-  ];
+  ]);
 
   const animationContainer = useRef(null);
   useEffect(() => {
@@ -167,7 +168,10 @@ export default function Home() {
       </section>
 
       {services.map((service) => (
-        <section className='hero-container' key={service.id}>
+        <section
+          className='hero-container'
+          id={`heroContainer${service.id}`}
+          key={service.id}>
           <div className='hero-description'>
             <h2>
               <strong>{service.name}</strong>
@@ -210,6 +214,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <Breadcrum />
       <Footer />
     </div>
   );
