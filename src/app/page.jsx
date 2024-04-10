@@ -170,7 +170,7 @@ export default function Home() {
       {services.map((service) => (
         <section
           className='hero-container'
-          id={`heroContainer${service.id}`}
+          id={`${service.id}`}
           key={service.id}>
           <div className='hero-description'>
             <h2>

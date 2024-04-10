@@ -44,21 +44,6 @@ export default function Nav() {
             </Link>
           </li>
           <li className='item'>
-            <Link className='link' href='/'>
-              item 2
-            </Link>
-          </li>
-          <li className='item'>
-            <Link className='link' href='/'>
-              item 3
-            </Link>
-          </li>
-          <li className='item'>
-            <Link className='link' href='/'>
-              item 4
-            </Link>
-          </li>
-          <li className='item'>
             <Link className='link' href='/contact'>
               Contact
             </Link>
